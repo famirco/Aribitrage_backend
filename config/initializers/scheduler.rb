@@ -1,8 +1,7 @@
 require 'rufus-scheduler'
 
-scheduler = Rufus::Scheduler.new
+scheduler = Rufus::Scheduler.singleton
 
-scheduler.every '30s' do
-  Rails.logger.info "Starting scheduled price fetch..."
-  FetchPricesJob.perform_later
+scheduler.every '1m' do
+  DetectArbitrageJob.perform_later
 end
