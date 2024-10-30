@@ -15,7 +15,10 @@ test:
   database: crypto_arbitrage_test
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: crypto_arbitrage_production
-  username: <%= ENV['CRYPTO_ARBITRAGE_DATABASE_USERNAME'] %>
-  password: <%= ENV['CRYPTO_ARBITRAGE_DATABASE_PASSWORD'] %>
+  username: admin1
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
+  port: 5432
