@@ -5,8 +5,6 @@ ruby "3.2.0"
 
 gem 'rack-cors'
 gem 'eth'
-gem 'web3-eth'
-gem 'dotenv-rails'
 
 gem 'rufus-scheduler'
 gem 'web3-eth'
