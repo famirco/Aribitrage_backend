@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buy_price: 9.99
+  sell_price: 9.99
+  profit: 9.99
+  token: one
+
+two:
+  buy_price: 9.99
+  sell_price: 9.99
+  profit: 9.99
+  token: two

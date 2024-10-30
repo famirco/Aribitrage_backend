@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: admin1
+  password: Amir@!-23545
+  host: localhost
+
+development:
+  <<: *default
+  database: crypto_arbitrage_development
+
+test:
+  <<: *default
+  database: crypto_arbitrage_test
+
+production:
+  <<: *default
+  database: crypto_arbitrage_production
+  username: <%= ENV['CRYPTO_ARBITRAGE_DATABASE_USERNAME'] %>
+  password: <%= ENV['CRYPTO_ARBITRAGE_DATABASE_PASSWORD'] %>

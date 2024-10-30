@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  token: one
+  price_usdc: 9.99
+  gas_fee: 9.99
+  rpc_url: MyString
+
+two:
+  token: two
+  price_usdc: 9.99
+  gas_fee: 9.99
+  rpc_url: MyString
