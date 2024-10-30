@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.0"
 
-gem 'rack-cors'
+
+gem 'rack-cors', require: 'rack/cors'
 gem 'eth'
 
 gem 'rufus-scheduler'
