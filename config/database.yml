@@ -19,6 +19,6 @@ production:
   encoding: unicode
   database: crypto_arbitrage_production
   username: admin1
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: Amir@!-23545
   host: localhost
   port: 5432
