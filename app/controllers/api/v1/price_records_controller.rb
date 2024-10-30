@@ -1,8 +1,8 @@
 module Api
   module V1
-    class PriceRecordsController < ApplicationController
+    class PriceRecordsController < BaseApiController
       def index
-        @price_records = PriceRecord.includes(:token).order(created_at: :desc).limit(100)
+        @price_records = PriceRecord.all
         render json: @price_records
       end
     end

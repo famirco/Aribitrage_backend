@@ -1,6 +1,6 @@
 module Api
   module V1
-    class TokensController < ApplicationController
+    class TokensController < BaseApiController
       def index
         @tokens = Token.all
         render json: @tokens
