@@ -1,6 +1,6 @@
 require_relative "boot"
 require "rails/all"
-
+require 'rack/cors'
 module CryptoArbitrageBackend
   class Application < Rails::Application
     config.load_defaults 7.0
