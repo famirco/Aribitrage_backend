@@ -1,4 +1,4 @@
-odule Api
+module Api
   module V1
     class ArbitrageOpportunitiesController < ApplicationController
       def index
