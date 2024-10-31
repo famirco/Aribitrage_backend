@@ -10,7 +10,7 @@ gem 'eth'
 gem 'rufus-scheduler'
 gem 'web3-eth'
 gem 'dotenv-rails'
-
+gem 'rails-settings-cached', '~> 2.9'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8"
 
