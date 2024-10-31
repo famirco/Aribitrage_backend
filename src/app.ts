@@ -2,4 +2,4 @@
 import configRoutes from './routes/config.routes';
 
 // در بخش routes (قبل از export)
-app.use('/api/config', configRoutes);
+app.use('/api/v1/config', configRoutes);
