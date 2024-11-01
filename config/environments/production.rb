@@ -74,7 +74,17 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
-
+  config.cache_classes = true
+  config.eager_load = true
+  config.consider_all_requests_local = false
+  config.api_only = true
+  
+  config.public_file_server.enabled = true
+  config.log_level = :debug
+  config.log_tags = [:request_id]
+  
+  config.action_controller.perform_caching = true
+  config.cache_store = :memory_store
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
