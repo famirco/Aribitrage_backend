@@ -1,9 +1,15 @@
+# app/controllers/api/v1/tokens_controller.rb
 module Api
   module V1
-    class TokensController < BaseApiController
+    class TokensController < ApplicationController
       def index
-        @tokens = Token.all
-        render json: @tokens
+        begin
+          tokens = Setting.tokens || []
+          render json: tokens
+        rescue => e
+          Rails.logger.error "Error in tokens#index: #{e.message}"
+          render json: { error: e.message }, status: :internal_server_error
+        end
       end
     end
   end
